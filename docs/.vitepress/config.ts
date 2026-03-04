@@ -12,6 +12,8 @@ export default withMermaidConfig(
       'en/:pages*': ':pages*',
     },
 
+    base: '/vitepress-plugin-mermaid/',
+
     lastUpdated: true,
     cleanUrls: true,
     metaChunk: true,
