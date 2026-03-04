@@ -40,6 +40,6 @@ graph TD
 
 ## 下一步
 
-- **[快速开始](./guide/getting-started.md)** - 安装和配置自定义主题
-- **[开发指南](./guide/development.md)** - 了解架构与入口分离
-- **[示例](./examples/)** - 查看各种类型的图表效果
+- **[快速开始](./getting-started.md)** - 安装和配置自定义主题
+- **[开发指南](./development.md)** - 了解架构与入口分离
+- **[示例](../examples/)** - 查看各种类型的图表效果

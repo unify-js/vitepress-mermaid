@@ -40,6 +40,6 @@ graph TD
 
 ## Next Steps
 
-- **[Getting Started](./guide/getting-started.md)** - Install and configure the custom theme
-- **[Development](./guide/development.md)** - Understand architecture and entry separation
-- **[Examples](./examples/)** - See various diagram types in action
+- **[Getting Started](./getting-started.md)** - Install and configure the custom theme
+- **[Development](./development.md)** - Understand architecture and entry separation
+- **[Examples](../examples/)** - See various diagram types in action
