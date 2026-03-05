@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /en/guide/getting-started
+      link: /guide/getting-started
     - theme: alt
       text: View Examples
-      link: /en/examples/
+      link: /examples/
     - theme: alt
       text: GitHub
       link: https://github.com/unify-js/vitepress-mermaid
