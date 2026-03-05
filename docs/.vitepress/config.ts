@@ -18,13 +18,9 @@ export default withMermaidConfig(
     cleanUrls: true,
     metaChunk: true,
 
-    head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
-
     themeConfig: {
-      logo: '/logo.svg',
-
       socialLinks: [
-        { icon: 'github', link: 'https://github.com/unify-js/vitepress-plugin-mermaid-preview' },
+        { icon: 'github', link: 'https://github.com/unify-js/vitepress-mermaid' },
       ],
 
       search: {
@@ -70,7 +66,7 @@ export default withMermaidConfig(
           },
           editLink: {
             pattern:
-              'https://github.com/unify-js/vitepress-plugin-mermaid-preview/edit/main/docs/:path',
+              'https://github.com/unify-js/vitepress-mermaid/edit/main/docs/:path',
             text: 'Edit this page on GitHub',
           },
           docFooter: {
@@ -129,7 +125,7 @@ export default withMermaidConfig(
           },
           editLink: {
             pattern:
-              'https://github.com/unify-js/vitepress-plugin-mermaid-preview/edit/main/docs/:path',
+              'https://github.com/unify-js/vitepress-mermaid/edit/main/docs/:path',
             text: '在 GitHub 上编辑此页面',
           },
           docFooter: {

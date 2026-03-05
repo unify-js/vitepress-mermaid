@@ -14,7 +14,7 @@ hero:
       link: /zh/examples/
     - theme: alt
       text: GitHub
-      link: https://github.com/unify-js/vitepress-plugin-mermaid-preview
+      link: https://github.com/unify-js/vitepress-mermaid
 
 features:
   - icon: 🎯
