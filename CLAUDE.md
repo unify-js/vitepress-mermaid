@@ -126,3 +126,11 @@ Prettier configuration (from `.prettierrc`):
   - Development guidelines (`docs/[lang]/guide/development.md`)
   - API documentation (`docs/[lang]/api/`)
 - Ensure both English (`docs/en/`) and Chinese (`docs/zh/`) docs are updated
+
+### README.md Synchronization
+
+The package README at `packages/vitepress-mermaid/README.md` must be kept in sync with the root `README.md`. When updating documentation:
+
+1. **Primary source:** Root `README.md` is the source of truth
+2. **Sync rule:** After editing root `README.md`, copy the entire content to `packages/vitepress-mermaid/README.md`
+3. **Validation:** Ensure both files are identical before publishing
