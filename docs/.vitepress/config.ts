@@ -12,7 +12,7 @@ export default withMermaidConfig(
       'en/:pages*': ':pages*',
     },
 
-    base: '/vitepress-plugin-mermaid/',
+    base: '/vitepress-mermaid/',
 
     lastUpdated: true,
     cleanUrls: true,
