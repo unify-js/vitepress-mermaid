@@ -112,7 +112,7 @@ md.use(mermaidMarkdownPlugin);
 
 ## Requirements
 
-- `vitepress`: ^1.0.0
+- `vitepress`: ^2.0.0
 - `mermaid`: ^11.0.0
 
 ## License
