@@ -1,6 +1,6 @@
 {
   "name": "@unify-js/vitepress-mermaid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "VitePress custom theme for Mermaid diagram preview with fullscreen, zoom, and pan support",
   "type": "module",
   "main": "./dist/index.js",
