@@ -203,6 +203,8 @@ onUnmounted(() => {
   max-width: none;
   max-height: none;
   display: block;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .mermaid-preview-hint {
