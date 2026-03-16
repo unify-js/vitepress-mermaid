@@ -1,11 +1,11 @@
 # Dependencies
-node_modules
+**/node_modules/**
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
 
 # Build output
-dist
+**/dist/**
 
 # VitePress
 .vitepress/cache
