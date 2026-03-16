@@ -1,0 +1,47 @@
+{
+  "name": "@unify-js/create-vitepress-mermaid",
+  "version": "0.1.0",
+  "description": "CLI to create VitePress projects with vitepress-mermaid",
+  "type": "module",
+  "bin": {
+    "create-vitepress-mermaid": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "template"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "keywords": [
+    "vitepress",
+    "mermaid",
+    "cli",
+    "scaffold",
+    "template"
+  ],
+  "author": "Luo Huidong",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unify-js/vitepress-mermaid.git",
+    "directory": "packages/create-vitepress-mermaid"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.10.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.13",
+    "memfs": "^4.56.11",
+    "typescript": "^5.0.0",
+    "vitest": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
