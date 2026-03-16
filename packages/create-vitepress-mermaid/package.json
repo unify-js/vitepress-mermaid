@@ -11,7 +11,7 @@
     "template"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.prod.json",
     "dev": "tsc --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
