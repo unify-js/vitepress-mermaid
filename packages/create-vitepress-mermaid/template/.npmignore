@@ -1,0 +1,6 @@
+# VitePress build output
+docs/.vitepress/cache
+docs/.vitepress/dist
+
+# Dependencies
+node_modules
