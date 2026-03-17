@@ -41,7 +41,6 @@ export default withMermaidConfig(
               items: [
                 { text: 'What is VitePress Mermaid?', link: 'what-is-vitepress-mermaid' },
                 { text: 'Getting Started', link: 'getting-started' },
-                { text: 'Usage', link: 'usage' },
                 { text: 'Shortcuts', link: 'shortcuts' },
                 { text: 'Development', link: 'development' },
               ],
@@ -100,7 +99,6 @@ export default withMermaidConfig(
               items: [
                 { text: '什么是 VitePress Mermaid？', link: 'what-is-vitepress-mermaid' },
                 { text: '快速开始', link: 'getting-started' },
-                { text: '使用', link: 'usage' },
                 { text: '快捷键', link: 'shortcuts' },
                 { text: '开发指南', link: 'development' },
               ],

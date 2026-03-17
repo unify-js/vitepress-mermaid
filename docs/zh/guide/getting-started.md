@@ -126,3 +126,60 @@ graph TD
 ```
 
 **点击上方的图表** 打开全屏预览！
+
+## 交互式预览
+
+### 如何使用
+
+1. **点击** 文档中的任意图表
+2. 图表以 **全屏模式** 打开
+3. 使用 **鼠标滚轮** 或 **键盘** 缩放
+4. **拖拽** 在图表中平移
+5. 按 **ESC** 或点击 **X** 关闭
+
+### 示例：复杂图表
+
+尝试与这个较大的图表交互：
+
+```mermaid
+graph TB
+    subgraph "前端"
+        A[VitePress] --> B[Vue 组件]
+        B --> C[Mermaid 主题]
+    end
+
+    subgraph "图表渲染"
+        C --> D[Mermaid.js]
+        D --> E[SVG 输出]
+    end
+
+    subgraph "交互功能"
+        E --> F[点击处理器]
+        F --> G[全屏模态框]
+        G --> H[缩放与平移]
+    end
+
+    style A fill:#bd34fe,color:#fff
+    style D fill:#41d1ff,color:#000
+    style G fill:#10b981,color:#fff
+```
+
+**点击上方的图表以全屏模式探索！**
+
+## 显示源代码
+
+使用 `mermaid-example` 同时显示图表及其源代码：
+
+````markdown
+```mermaid-example
+graph LR
+    A[输入] --> B[处理]
+    B --> C[输出]
+```
+````
+
+```mermaid-example
+graph LR
+    A[输入] --> B[处理]
+    B --> C[输出]
+```

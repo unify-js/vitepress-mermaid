@@ -126,3 +126,60 @@ graph TD
 ```
 
 **Click on the diagram above** to open the fullscreen preview!
+
+## Interactive Preview
+
+### How to Use
+
+1. **Click** on any diagram in your documentation
+2. The diagram opens in **fullscreen mode**
+3. Use your **mouse wheel** or **keyboard** to zoom
+4. **Drag** to pan around the diagram
+5. Press **ESC** or click the **X** to close
+
+### Example: Complex Diagram
+
+Try interacting with this larger diagram:
+
+```mermaid
+graph TB
+    subgraph "Frontend"
+        A[VitePress] --> B[Vue Components]
+        B --> C[Mermaid Theme]
+    end
+
+    subgraph "Diagram Rendering"
+        C --> D[Mermaid.js]
+        D --> E[SVG Output]
+    end
+
+    subgraph "Interactive Features"
+        E --> F[Click Handler]
+        F --> G[Fullscreen Modal]
+        G --> H[Zoom & Pan]
+    end
+
+    style A fill:#bd34fe,color:#fff
+    style D fill:#41d1ff,color:#000
+    style G fill:#10b981,color:#fff
+```
+
+**Click the diagram above to explore it in fullscreen!**
+
+## Show Source Code
+
+Use `mermaid-example` to display both the diagram and its source:
+
+````markdown
+```mermaid-example
+graph LR
+    A[Input] --> B[Process]
+    B --> C[Output]
+```
+````
+
+```mermaid-example
+graph LR
+    A[Input] --> B[Process]
+    B --> C[Output]
+```
