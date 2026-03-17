@@ -11,6 +11,31 @@ A VitePress custom theme that provides fullscreen preview functionality for Merm
 - ⌨️ **Keyboard Shortcuts** - ESC to close, Ctrl/Cmd + +/- to zoom
 - 📱 **Responsive Design** - Mobile-friendly interaction experience
 
+## Quick Start
+
+The easiest way to get started is using the `create-vitepress-mermaid` CLI tool, which scaffolds a pre-configured VitePress project:
+
+```bash
+# npm
+npm create @unify-js/vitepress-mermaid
+
+# pnpm
+pnpm create @unify-js/vitepress-mermaid
+
+# yarn
+yarn create @unify-js/vitepress-mermaid
+```
+
+Then follow the instructions to install dependencies and start the dev server:
+
+```bash
+cd <project-name>
+npm install  # or pnpm install, yarn
+npm run dev  # or pnpm dev, yarn dev
+```
+
+The generated project includes sample Mermaid diagrams and complete TypeScript configuration.
+
 ## Installation
 
 ```bash
