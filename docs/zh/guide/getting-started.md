@@ -2,7 +2,46 @@
 
 在几分钟内开始使用 VitePress Mermaid。
 
-## 安装
+## 选择你的开始方式
+
+| 场景                | 推荐方式 | 说明                             |
+| ------------------- | -------- | -------------------------------- |
+| 创建新项目          | CLI 工具 | 一键生成预配置项目，包含示例图表 |
+| 已有 VitePress 项目 | 手动集成 | 安装插件并配置到现有项目         |
+
+## 方式一：使用 CLI 创建新项目
+
+使用 `create-vitepress-mermaid` CLI 工具创建预配置项目：
+
+::: code-group
+
+```bash [pnpm]
+pnpm create @unify-js/vitepress-mermaid
+```
+
+```bash [npm]
+npm create @unify-js/vitepress-mermaid
+```
+
+```bash [yarn]
+yarn create @unify-js/vitepress-mermaid
+```
+
+:::
+
+创建完成后，按照提示安装依赖并启动开发服务器：
+
+```bash
+cd <project-name>
+npm install  # 或 pnpm install, yarn
+npm run dev  # 或 pnpm dev, yarn dev
+```
+
+生成的项目包含示例 Mermaid 图表和完整的 TypeScript 配置。
+
+## 方式二：集成到现有项目
+
+### 安装
 
 使用您喜欢的包管理器安装自定义主题：
 
@@ -22,7 +61,7 @@ yarn add -D @unify-js/vitepress-mermaid
 
 :::
 
-## 依赖要求
+### 依赖要求
 
 本自定义主题需要以下依赖才能正常工作，请确保已安装：
 
@@ -30,9 +69,9 @@ yarn add -D @unify-js/vitepress-mermaid
 pnpm add -D vitepress mermaid
 ```
 
-## 配置
+### 配置
 
-### 第一步：配置 VitePress 配置
+#### 第一步：配置 VitePress 配置
 
 创建或编辑您的 `.vitepress/config.ts` 文件：
 
@@ -47,7 +86,7 @@ export default withMermaidConfig(
 );
 ```
 
-### 第二步：配置主题
+#### 第二步：配置主题
 
 创建或编辑您的 `.vitepress/theme/index.ts` 文件：
 
@@ -87,26 +126,3 @@ graph TD
 ```
 
 **点击上方的图表** 打开全屏预览！
-
-## 显示源代码
-
-使用 `mermaid-example` 可以同时显示图表及其源代码：
-
-````markdown
-```mermaid-example
-graph LR
-  A --> B --> C
-```
-````
-
-```mermaid-example
-graph LR
-  A --> B --> C
-```
-
-## 下一步
-
-- 了解 [开发细节](./development.md)
-- 查看更多 [使用示例](./usage.md)
-- 查看 [键盘快捷键](./shortcuts.md)
-- 浏览 [图表示例](../examples/)

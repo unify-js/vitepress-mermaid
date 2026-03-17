@@ -2,7 +2,46 @@
 
 Get up and running with VitePress Mermaid in minutes.
 
-## Installation
+## Choose Your Starting Point
+
+| Scenario                   | Recommended Approach | Description                                               |
+| -------------------------- | -------------------- | --------------------------------------------------------- |
+| Creating a new project     | CLI Tool             | Scaffold a pre-configured project with sample diagrams    |
+| Existing VitePress project | Manual Integration   | Install and configure the plugin in your existing project |
+
+## Option 1: Scaffold with CLI
+
+Use the `create-vitepress-mermaid` CLI tool to create a new pre-configured project:
+
+::: code-group
+
+```bash [pnpm]
+pnpm create @unify-js/vitepress-mermaid
+```
+
+```bash [npm]
+npm create @unify-js/vitepress-mermaid
+```
+
+```bash [yarn]
+yarn create @unify-js/vitepress-mermaid
+```
+
+:::
+
+After creation, follow the instructions to install dependencies and start the dev server:
+
+```bash
+cd <project-name>
+npm install  # or pnpm install, yarn
+npm run dev  # or pnpm dev, yarn dev
+```
+
+The generated project includes sample Mermaid diagrams and complete TypeScript configuration.
+
+## Option 2: Integrate into Existing Project
+
+### Installation
 
 Install the plugin using your preferred package manager:
 
@@ -22,7 +61,7 @@ yarn add -D @unify-js/vitepress-mermaid
 
 :::
 
-## Dependency Requirements
+### Dependency Requirements
 
 This custom theme requires the following dependencies to work properly. Please make sure they are installed:
 
@@ -30,9 +69,9 @@ This custom theme requires the following dependencies to work properly. Please m
 pnpm add -D vitepress mermaid
 ```
 
-## Configuration
+### Configuration
 
-### Step 1: Configure VitePress Config
+#### Step 1: Configure VitePress Config
 
 Create or edit your `.vitepress/config.ts` file:
 
@@ -47,7 +86,7 @@ export default withMermaidConfig(
 );
 ```
 
-### Step 2: Configure the Theme
+#### Step 2: Configure the Theme
 
 Create or edit your `.vitepress/theme/index.ts` file:
 
@@ -87,26 +126,3 @@ graph TD
 ```
 
 **Click on the diagram above** to open the fullscreen preview!
-
-## Displaying Source Code
-
-Use `mermaid-example` to show both the diagram and its source code:
-
-````markdown
-```mermaid-example
-graph LR
-  A --> B --> C
-```
-````
-
-```mermaid-example
-graph LR
-  A --> B --> C
-```
-
-## Next Steps
-
-- Learn about [development details](./development.md)
-- See more [usage examples](./usage.md)
-- Check out [keyboard shortcuts](./shortcuts.md)
-- Explore [diagram examples](../examples/)

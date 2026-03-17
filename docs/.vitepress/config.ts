@@ -19,9 +19,7 @@ export default withMermaidConfig(
     metaChunk: true,
 
     themeConfig: {
-      socialLinks: [
-        { icon: 'github', link: 'https://github.com/unify-js/vitepress-mermaid' },
-      ],
+      socialLinks: [{ icon: 'github', link: 'https://github.com/unify-js/vitepress-mermaid' }],
 
       search: {
         provider: 'local',
@@ -65,8 +63,7 @@ export default withMermaidConfig(
             copyright: 'Copyright © 2025-present Huidong Luo',
           },
           editLink: {
-            pattern:
-              'https://github.com/unify-js/vitepress-mermaid/edit/main/docs/:path',
+            pattern: 'https://github.com/unify-js/vitepress-mermaid/edit/main/docs/:path',
             text: 'Edit this page on GitHub',
           },
           docFooter: {
@@ -75,6 +72,7 @@ export default withMermaidConfig(
           },
           outline: {
             label: 'On this page',
+            level: [2, 3],
           },
           lastUpdated: {
             text: 'Last updated',
@@ -124,8 +122,7 @@ export default withMermaidConfig(
             copyright: 'Copyright © 2025-present Huidong Luo',
           },
           editLink: {
-            pattern:
-              'https://github.com/unify-js/vitepress-mermaid/edit/main/docs/:path',
+            pattern: 'https://github.com/unify-js/vitepress-mermaid/edit/main/docs/:path',
             text: '在 GitHub 上编辑此页面',
           },
           docFooter: {
@@ -134,6 +131,7 @@ export default withMermaidConfig(
           },
           outline: {
             label: '本页内容',
+            level: [2, 3],
           },
           lastUpdated: {
             text: '最后更新于',

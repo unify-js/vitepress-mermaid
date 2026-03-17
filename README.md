@@ -11,9 +11,16 @@ A VitePress custom theme that provides fullscreen preview functionality for Merm
 - ⌨️ **Keyboard Shortcuts** - ESC to close, Ctrl/Cmd + +/- to zoom
 - 📱 **Responsive Design** - Mobile-friendly interaction experience
 
-## Quick Start
+## Choose Your Starting Point
 
-The easiest way to get started is using the `create-vitepress-mermaid` CLI tool, which scaffolds a pre-configured VitePress project:
+| Scenario                   | Recommended Approach | Description                                               |
+| -------------------------- | -------------------- | --------------------------------------------------------- |
+| Creating a new project     | CLI Tool             | Scaffold a pre-configured project with sample diagrams    |
+| Existing VitePress project | Manual Integration   | Install and configure the plugin in your existing project |
+
+## Option 1: Scaffold with CLI
+
+Use the `create-vitepress-mermaid` CLI tool to create a new pre-configured project:
 
 ```bash
 # npm
@@ -26,7 +33,7 @@ pnpm create @unify-js/vitepress-mermaid
 yarn create @unify-js/vitepress-mermaid
 ```
 
-Then follow the instructions to install dependencies and start the dev server:
+After creation, follow the instructions to install dependencies and start the dev server:
 
 ```bash
 cd <project-name>
@@ -36,7 +43,11 @@ npm run dev  # or pnpm dev, yarn dev
 
 The generated project includes sample Mermaid diagrams and complete TypeScript configuration.
 
-## Installation
+## Option 2: Integrate into Existing Project
+
+### Installation
+
+Install the plugin using your preferred package manager:
 
 ```bash
 pnpm add @unify-js/vitepress-mermaid
@@ -46,7 +57,7 @@ npm install @unify-js/vitepress-mermaid
 yarn add @unify-js/vitepress-mermaid
 ```
 
-## Dependency Requirements
+### Dependency Requirements
 
 This custom theme requires the following dependencies to work properly. Please make sure they are installed:
 
@@ -54,9 +65,9 @@ This custom theme requires the following dependencies to work properly. Please m
 pnpm add -D vitepress mermaid
 ```
 
-## Usage
+### Configuration
 
-### Step 1: Configure VitePress Config
+#### Step 1: Configure VitePress Config
 
 In `.vitepress/config.ts`:
 
@@ -73,7 +84,7 @@ export default withMermaidConfig(
 
 > **Important:** The config helper must be imported from `@unify-js/vitepress-mermaid/config` (with `/config` suffix), not from the root package. This is because VitePress config runs in Node.js, while the theme runs in the browser. Keeping them separate prevents module resolution errors.
 
-### Step 2: Configure Theme
+#### Step 2: Configure Theme
 
 In `.vitepress/theme/index.ts`:
 
