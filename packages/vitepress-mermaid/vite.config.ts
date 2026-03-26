@@ -1,30 +1,21 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import { resolve } from 'node:path';
 import vue from '@vitejs/plugin-vue';
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    cssInjectedByJsPlugin({
-      jsAssetsFilterFunction: outputChunk => outputChunk.fileName === 'index.js',
-    }),
-  ],
+  plugins: [vue()],
   build: {
     lib: {
       entry: {
-        index: resolve(__dirname, 'src/index.ts'),
-        config: resolve(__dirname, 'src/config.ts'),
+        index: resolve(import.meta.dirname, 'src/index.ts'),
+        config: resolve(import.meta.dirname, 'src/config.ts'),
       },
       formats: ['es'],
       fileName: (_, entryName) => `${entryName}.js`,
+      cssFileName: 'style',
     },
-    rollupOptions: {
+    rolldownOptions: {
       external: ['vitepress', 'mermaid', 'vue', /^vitepress\//],
-      output: {
-        preserveModules: false,
-      },
     },
-    cssCodeSplit: false,
   },
 });
