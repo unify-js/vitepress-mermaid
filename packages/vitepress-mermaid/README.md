@@ -73,16 +73,15 @@ In `.vitepress/config.ts`:
 
 ```typescript
 import { defineConfig } from 'vitepress';
-import { withMermaidConfig } from '@unify-js/vitepress-mermaid/config';
+import vitepressMermaidConfig from '@unify-js/vitepress-mermaid/config';
 
-export default withMermaidConfig(
-  defineConfig({
-    // Your VitePress config
-  })
-);
+export default defineConfig({
+  extends: vitepressMermaidConfig,
+  // Your VitePress config
+});
 ```
 
-> **Important:** The config helper must be imported from `@unify-js/vitepress-mermaid/config` (with `/config` suffix), not from the root package. This is because VitePress config runs in Node.js, while the theme runs in the browser. Keeping them separate prevents module resolution errors.
+> **Important:** The config must be imported from `@unify-js/vitepress-mermaid/config` (with `/config` suffix), not from the root package. This is because VitePress config runs in Node.js, while the theme runs in the browser. Keeping them separate prevents module resolution errors.
 
 #### Step 2: Configure Theme
 

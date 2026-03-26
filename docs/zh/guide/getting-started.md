@@ -77,13 +77,12 @@ pnpm add -D vitepress mermaid
 
 ```typescript
 import { defineConfig } from 'vitepress';
-import { withMermaidConfig } from '@unify-js/vitepress-mermaid/config';
+import vitepressMermaidConfig from '@unify-js/vitepress-mermaid/config';
 
-export default withMermaidConfig(
-  defineConfig({
-    // 您的 VitePress 配置
-  })
-);
+export default defineConfig({
+  extends: vitepressMermaidConfig,
+  // 您的 VitePress 配置
+});
 ```
 
 #### 第二步：配置主题

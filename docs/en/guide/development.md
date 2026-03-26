@@ -18,7 +18,7 @@ packages/vitepress-mermaid/src/
 │   ├── useMermaidPreview.ts  # Internal state management
 │   └── Layout.vue            # Layout component with preview slot
 ├── index.ts                  # Browser entry, exports MermaidTheme
-├── config.ts                 # Node.js entry, exports withMermaidConfig
+├── config.ts                 # Node.js entry, exports plain config object
 ├── mermaid-markdown.ts       # markdown-it plugin implementation
 └── env.d.ts                  # Type declarations for build/dev environment
 ```
@@ -47,7 +47,7 @@ import { MermaidTheme } from '@unify-js/vitepress-mermaid';
 import '@unify-js/vitepress-mermaid/style.css';
 
 // Node.js entry (VitePress config)
-import { withMermaidConfig } from '@unify-js/vitepress-mermaid/config';
+import vitepressMermaidConfig from '@unify-js/vitepress-mermaid/config';
 ```
 
 ## Important: Import Path Separation
@@ -56,13 +56,17 @@ VitePress Mermaid provides two separate entry points for different environments:
 
 ### Config Entry (Node.js)
 
-For VitePress config file (`.vitepress/config.ts`), import from `/config`:
+For VitePress config file (`.vitepress/config.ts`), import the default export from `/config` and use it with VitePress's `extends`:
 
 ```typescript
-import { withMermaidConfig } from '@unify-js/vitepress-mermaid/config';
+import vitepressMermaidConfig from '@unify-js/vitepress-mermaid/config';
+
+export default defineConfig({
+  extends: vitepressMermaidConfig,
+});
 ```
 
-- `withMermaidConfig` must be imported from `@unify-js/vitepress-mermaid/config`
+- The config must be imported from `@unify-js/vitepress-mermaid/config` (not the root entry)
 
 ### Theme Entry (Browser)
 

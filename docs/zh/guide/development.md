@@ -18,7 +18,7 @@ packages/vitepress-mermaid/src/
 │   ├── useMermaidPreview.ts  # 内部状态管理
 │   └── Layout.vue            # 布局组件（包含预览插槽）
 ├── index.ts                  # 浏览器入口，导出 MermaidTheme
-├── config.ts                 # Node.js 入口，导出 withMermaidConfig
+├── config.ts                 # Node.js 入口，导出纯配置对象
 ├── mermaid-markdown.ts       # markdown-it 插件实现
 └── env.d.ts                  # 构建/开发环境类型声明
 ```
@@ -47,7 +47,7 @@ import { MermaidTheme } from '@unify-js/vitepress-mermaid';
 import '@unify-js/vitepress-mermaid/style.css';
 
 // Node.js 入口（VitePress 配置）
-import { withMermaidConfig } from '@unify-js/vitepress-mermaid/config';
+import vitepressMermaidConfig from '@unify-js/vitepress-mermaid/config';
 ```
 
 ## 重要：导入路径分离
@@ -56,13 +56,17 @@ VitePress Mermaid 为不同环境提供两个独立的入口点：
 
 ### 配置入口（Node.js）
 
-对于 VitePress 配置文件（`.vitepress/config.ts`），从 `/config` 导入：
+对于 VitePress 配置文件（`.vitepress/config.ts`），从 `/config` 导入默认导出，并使用 VitePress 的 `extends` 机制：
 
 ```typescript
-import { withMermaidConfig } from '@unify-js/vitepress-mermaid/config';
+import vitepressMermaidConfig from '@unify-js/vitepress-mermaid/config';
+
+export default defineConfig({
+  extends: vitepressMermaidConfig,
+});
 ```
 
-- `withMermaidConfig` 必须从 `@unify-js/vitepress-mermaid/config` 导入
+- 配置必须从 `@unify-js/vitepress-mermaid/config` 导入（而非根入口）
 
 ### 主题入口（浏览器）
 

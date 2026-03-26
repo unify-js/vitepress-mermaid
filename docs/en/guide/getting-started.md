@@ -77,13 +77,12 @@ Create or edit your `.vitepress/config.ts` file:
 
 ```typescript
 import { defineConfig } from 'vitepress';
-import { withMermaidConfig } from '@unify-js/vitepress-mermaid/config';
+import vitepressMermaidConfig from '@unify-js/vitepress-mermaid/config';
 
-export default withMermaidConfig(
-  defineConfig({
-    // Your VitePress config
-  })
-);
+export default defineConfig({
+  extends: vitepressMermaidConfig,
+  // Your VitePress config
+});
 ```
 
 #### Step 2: Configure the Theme
