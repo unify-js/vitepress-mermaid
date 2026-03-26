@@ -44,6 +44,7 @@ Public APIs are exported from two entry points:
 ```typescript
 // Browser entry (theme)
 import { MermaidTheme } from '@unify-js/vitepress-mermaid';
+import '@unify-js/vitepress-mermaid/style.css';
 
 // Node.js entry (VitePress config)
 import { withMermaidConfig } from '@unify-js/vitepress-mermaid/config';
@@ -69,6 +70,7 @@ For theme file (`.vitepress/theme/index.ts`), import from the root:
 
 ```typescript
 import { MermaidTheme } from '@unify-js/vitepress-mermaid';
+import '@unify-js/vitepress-mermaid/style.css';
 ```
 
 ::: warning Why Separate Imports?

@@ -44,6 +44,7 @@ dist/
 ```typescript
 // 浏览器入口（主题）
 import { MermaidTheme } from '@unify-js/vitepress-mermaid';
+import '@unify-js/vitepress-mermaid/style.css';
 
 // Node.js 入口（VitePress 配置）
 import { withMermaidConfig } from '@unify-js/vitepress-mermaid/config';
@@ -69,6 +70,7 @@ import { withMermaidConfig } from '@unify-js/vitepress-mermaid/config';
 
 ```typescript
 import { MermaidTheme } from '@unify-js/vitepress-mermaid';
+import '@unify-js/vitepress-mermaid/style.css';
 ```
 
 ::: warning 为什么要分开导入？
