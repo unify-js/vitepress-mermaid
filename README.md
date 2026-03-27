@@ -81,8 +81,6 @@ export default defineConfig({
 });
 ```
 
-> **Important:** The config must be imported from `@unify-js/vitepress-mermaid/config` (with `/config` suffix), not from the root package. This is because VitePress config runs in Node.js, while the theme runs in the browser. Keeping them separate prevents module resolution errors.
-
 #### Step 2: Configure Theme
 
 In `.vitepress/theme/index.ts`:
