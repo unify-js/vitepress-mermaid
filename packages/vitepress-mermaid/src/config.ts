@@ -7,6 +7,11 @@ const config: UserConfig = {
       mermaidMarkdownPlugin(md);
     },
   },
+  vite: {
+    ssr: {
+      noExternal: ['@unify-js/vitepress-mermaid'],
+    },
+  },
 };
 
 export default config;

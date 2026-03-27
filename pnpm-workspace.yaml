@@ -1,7 +1,6 @@
 packages:
   - 'docs'
   - 'packages/*'
-  - 'packages/create-vitepress-mermaid/template'
 
 onlyBuiltDependencies:
   - esbuild
